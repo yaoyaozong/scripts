@@ -1,0 +1,26 @@
+#!/bin/sh
+
+iptables -D INPUT -s 163.184.146.0/24 -j ACCEPT
+iptables -A INPUT -s 163.184.146.0/24 -j ACCEPT
+
+iptables -D INPUT -s 163.184.132.0/23 -j ACCEPT
+iptables -A INPUT -s 163.184.132.0/23 -j ACCEPT
+
+iptables -D INPUT -s 163.184.134.0/24 -j ACCEPT
+iptables -A INPUT -s 163.184.134.0/24 -j ACCEPT
+
+iptables -D INPUT -s 163.184.251.0/24 -j ACCEPT
+iptables -A INPUT -s 163.184.251.0/24 -j ACCEPT
+
+iptables -D INPUT -s 163.184.56.0/24 -j ACCEPT
+iptables -A INPUT -s 163.184.56.0/24 -j ACCEPT
+
+iptables -D INPUT -s 163.184.177.128/25 -j ACCEPT
+iptables -A INPUT -s 163.184.177.128/25 -j ACCEPT
+
+iptables -D INPUT -s 172.30.0.253/24 -j ACCEPT
+iptables -A INPUT -s 172.30.0.253/24 -j ACCEPT
+
+iptables -P INPUT DROP
+
+service iptables save
